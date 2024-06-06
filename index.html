@@ -10,6 +10,9 @@
   <body>
     <nav>
       <ul id="nav-menu">
+        <li class="nav-menu-item" onclick="changeContent('home')">
+          <a>Home</a>
+        </li>
         <li class="nav-menu-item" onclick="changeContent('about')">
           <a>About Me</a>
         </li>
@@ -24,10 +27,8 @@
         </li>
       </ul>
     </nav>
-    <header>
-      <aside>
-        <img src="public/images/mainimage.jpeg" alt="image of Mphatso Nkhoma" />
-      </aside>
+    <header id="home">
+      
       <section>
         <h1><span>Mphatso</span><br /><span class="surname">Nkhoma</span></h1>
         <!--<span class="on-top">Mphatso</span><br /><span class="on-top"
@@ -40,68 +41,125 @@
           learning with an emphasis on awareness and compassion.
         </p>
       </section>
+      <aside>
+        <img src="public/images/mainimage.png" alt="image of Mphatso Nkhoma" />
+      </aside>
     </header>
     <main>
+      <section id="about">
+        <div class="gallery">
+  <img src="public/images/IMG-20240606-WA0001.jpg" alt="a forest after an apocalypse">
+  <img src="public/images/IMG-20240606-WA0002.jpg" alt="a waterfall and many rocks">
+  <img src="public/images/IMG-20240606-WA0004.jpg" alt="a house on a mountain">
+  <img src="public/images/IMG-20240606-WA0005.jpg" alt="sime pink flowers">
+  <img src="public/images/IMG-20240606-WA0004.jpg" alt="big rocks with some trees">
+  <img src="public/images/IMG-20240606-WA0002.jpg" alt="a waterfall, a lot of tree and a great view from the sky">
+  <img src="public/images/IMG-20240606-WA0005.jpg" alt="a cool landscape">
+  <img src="public/images/IMG-20240606-WA0003.jpg" alt="inside a town between two big buildings">
+  <img src="public/images/IMG-20240606-WA0004.jpg" alt="a great view of the sea above the mountain">
+</div>
+<div class="about-me">
+        <h2>Filmmaker / Writer /Marketer</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus iste, pariatur, alias facere vel mollitia iusto officia et, provident totam ea. Cumque commodi molestias, inventore delectus aspernatur expedita a id hic repellat dicta quidem rem quos ab? Aspernatur eligendi iusto mollitia sapiente nemo aliquam harum, rem, perspiciatis praesentium ipsa nesciunt labore! Accusantium, asperiores veniam cupiditate libero vel nemo soluta iste.</p>
+</div>
+      </section>
       <section id="film">
-        <aside>
-          <h3>The Ascension</h3>
-          <p>Short Film</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Reprehenderit quibusdam inventore tempore, distinctio aspernatur rem
-            corporis commodi odio ullam non beatae fugiat sed dolores illum,
-            repellat, sapiente corrupti. Consequatur esse odio tenetur
-            temporibus, incidunt fuga, aliquam minima minus.
-          
-        </p>
-          <p>
-            Director: Mphatso Nkhoma <br />Producer: Ali Syed
-            <br />Cinematographer: Tate Harhoff <br />Editor: Emma Kühn
-            <br />Sound Designer: Mikhail Williams<br />
-            Production Design: Gia Barbosa and Bonolo Motalane
-          </p>
-        </aside>
-        <iframe
-          width="560"
-          height="415"
-          src="https://www.youtube-nocookie.com/embed/18l6IiY2k2Q?si=CQkrrjAggPxfCDXE&amp;controls=0"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
-        
+        <ul id="cards">
+          <li class="card" id="card_1">
+            <div class="card__content">
+              <aside>
+                <h3>The Ascension</h3>
+                <span style="font-size:20px;background-color:var(--accent-color-3);">Short Film</span>
+                
+                <p>
+                  <br/>
+                  Director: Mphatso Nkhoma <br />Producer: Ali Syed
+                  <br />Cinematographer: Tate Harhoff <br />Editor: Emma Kühn
+                  <br />Sound Designer: Mikhail Williams<br />
+                  Production Design: Gia Barbosa and Bonolo Motalane
+                </p>
+              </aside>
+              <iframe
+                width="560"
+                height="415"
+                src="https://www.youtube-nocookie.com/embed/18l6IiY2k2Q?si=CQkrrjAggPxfCDXE&amp;controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+            </div>
+          </li>
+          <li class="card" id="card_2">
+            <div class="card__content">
+              <aside>
+                <h3>Nuit by Zara</h3>
+                <span style="font-size:20px;background-color:var(--accent-color-3);">Perfume Commercial</span>
+           
+                <p>
+                  <br/>
+                  I shot a commercial for my first-ever perfume. A personal project because of how much I enjoyed "Nuit". I got it a while ago so you can see that it is empty! The idea was freedom because of how good you smell with the 'ingredients': flowers and happiness, making a prominent feature.
+                </p>
+                
+              </aside>
+              <iframe
+                width="560"
+                height="415"
+                src="https://www.youtube-nocookie.com/embed/HuxJ2AwvUO0?si=o4fTc1zmWsXIew5R?si=CQkrrjAggPxfCDXE&amp;controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+            </div>
+          </li>
+        </ul>
       </section>
       <section id="writing">
-        <div
-          id="retainable-rss-embed"
-          data-rss="https://medium.com/@mphatsonkhoma23/feed/"
-          data-maxcols="3"
-          data-layout="grid"
-          data-poststyle="inline"
-          data-readmore="Read the rest"
-          data-buttonclass="btn btn-primary"
-          data-offset="-100"></div>
+        <div id="retainable-rss-embed" 
+data-rss="https://medium.com/feed/@mphatsonkhoma23"
+data-maxcols="3" 
+data-layout="slider" 
+data-poststyle="external" 
+data-buttonclass="btn btn-primary" 
+data-offset="0"></div>
       </section>
     </main>
 
     <address id="contact">
       <div align="center" class="socialbtns">
         <ul>
-          <li><a href="https://www.instagram.com/m_ph_a/" class="fa fa-lg fa-instagram"></a></li>
-          
-          <li><a href="https://medium.com/@mphatsonkhoma23/" class="fa fa-lg fa-medium"></a></li>
-          <li><a href="https://www.linkedin.com/in/mphatso-nkhoma/" class="fa fa-lg fa-linkedin"></a></li>
-          <li><a href="https://www.youtube.com/watch?v=18l6IiY2k2Q" class="fa fa-lg fa-youtube"></a></li>
+          <li>
+            <a
+              href="https://www.instagram.com/m_ph_a/"
+              class="fa fa-lg fa-instagram"></a>
+          </li>
+
+          <li>
+            <a
+              href="https://medium.com/@mphatsonkhoma23/"
+              class="fa fa-lg fa-medium"></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/mphatso-nkhoma/"
+              class="fa fa-lg fa-linkedin"></a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/@mphatsonkhoma23"
+              class="fa fa-lg fa-youtube"></a>
+          </li>
         </ul>
       </div>
     </address>
-    <a href="https://www.freepik.com/free-vector/w-colours-pattern-design-template_33459243.htm#fromView=image_search_similar&page=1&position=14&uuid=023f6c93-9fdd-4a76-9117-03de88fe6b6f">Image by freepik</a>
+    
   </body>
   <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
-<script> function changeContent(section) {
-    var scrollDiv = document.getElementById(section).offsetTop;
-window.scrollTo({ top: scrollDiv, behavior: 'smooth'});
-}
-</script>
-  </html>
+  <script>
+    function changeContent(section) {
+      var scrollDiv = document.getElementById(section).offsetTop;
+      window.scrollTo({ top: scrollDiv, behavior: "smooth" });
+    }
+  </script>
+</html>

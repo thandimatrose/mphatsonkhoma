@@ -8,6 +8,7 @@
   --accent-color-4: #75C9C8;
   --title-font: 'Didot';
   --main-font: 'Nexa';
+  --header-font: 'Didot';
   --main-light-color: #f9f7ef;
 
   --dark-color: #191f1d;
@@ -21,7 +22,7 @@
   --circle-rainbow: radial-gradient(
     circle at left top,#ede6bf,#ecc947,#cb5a31,#6f5d79,#4e779a
   );
-  --noise-texture: url(https://i.gyazo.com/a26366e538851a5c569ff648e99b7fd4.png);
+  --noise-texture: url(public/images/static.gif);
   --gif-texture: url(https://64.media.tumblr.com/da60c13b478dda09ab90c27e880983b8/tumblr_nd4pwdPKdc1tun3l0o1_1280.gifv);
 }
 
@@ -55,6 +56,7 @@ h4 {
 p {
     margin:0;
     padding: 0;
+    text-align: justify;
 }
 html {
 }
@@ -83,7 +85,7 @@ nav ul {
     display: grid;
     width: 100%;
     text-transform: uppercase;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     align-items: center;
     justify-items: center;
 }
@@ -98,23 +100,26 @@ nav ul li {
     transition: background-color 0.2s color 0.2s;
 
 }
+a {
+    padding: 0 10px;
+}
 nav ul li:hover {
     border: var(--main-dark-color) 1px solid;
     background-color: var(--main-light-color);
 
 }
 header {
+    margin-top: 100px;
     display: grid;
-    grid-template-columns: 40% 60%;
-    align-items: center;
-    justify-items: end;
-    margin-top: 130px;
+    grid-template-columns: 60% 40%;
+    padding: 0px 10%;
 }
+
+
 
 header:before {
     background-image: var(--noise-texture);
-    height: 580px;
-  width: 960px;
+    
   mix-blend-mode: overlay;
   pointer-events: none;
   z-index: 3;
@@ -130,15 +135,20 @@ header:hover:after{
   opacity: 64%;
   z-index: 3;
 }
+header aside {
+    width: 100%;
+    grid-template-columns: 100%;
+}
 header img {
-    display: block;
-    height: 500px;
+   width: 100%;
     margin-left: auto;
     margin-right: auto;
-    z-index: -1;
+    position: relative;
+    z-index: 7;
 }
 
 header span{
+    
     font-family: var(--title-font);
     font-size: 100px;
     line-height: 80px;
@@ -159,16 +169,31 @@ section {
     padding: 0px 20%;
 }
 
-section#film {
+ section#about{
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
     align-items: center;
-    justify-items: center;
-    padding: 30px 180px;
-    background-color: var(--accent-color-2);
+    background-color: white;
+    margin-top: 0px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+section#about div.about-me {
+margin-left: 40px;
+}
+section#film {
+    
 }
 section#film aside {
     padding: 20px;
+    align-content: center;
+}
+
+h3 {
+    font-family: var(--header-font);
+    width: fit-content;
+   font-size:50px;
 }
 
 section#film iframe {
@@ -208,5 +233,177 @@ address {
 }
 
 
+#cards {
+	/* Make place at bottom, as items will slide to that position*/
+	padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+	/* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+	margin-bottom: 100px;
+    
+}
+
+#card_1 {
+	--index: 1;
+}
+
+#card_2 {
+	--index: 2;
+}
+
+#card_3 {
+	--index: 3;
+}
+
+#card_4 {
+	--index: 4;
+}
+
+.card {
+	position: sticky;
+	top: 100px;
+    height: 600px;
+	padding-top: calc(var(--index) * var(--card-top-offset));
+}
+
+.card__content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    justify-items: center;
+    padding: 30px;
+    background-color: var(--accent-color-2);
+    display: grid;
+	transform-origin: 50% 0%;
+	will-change: transform;
+}
+
+/** DEBUG **/
+
+#debug {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+#debug::after {
+  content: " Show Debug";
+  margin-left: 1.5em;
+  color: white;
+  white-space: nowrap;
+}
+
+#debug:checked ~ main {
+  --outline-width: 1px;
+}
+
+
+#cards {
+	list-style: none;
+	outline: calc(var(--outline-width) * 10) solid hotpink;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--numcards), var(--card-height));
+	
+}
+
+.card {
+	outline: var(--outline-width) solid lime;
+}
+
+.card__content {
+	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+	background: rgb(255, 255, 255);
+	color: rgb(10, 5, 7);
+	border-radius: 1em;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-areas: "text img";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+
+	align-items: stretch;
+	outline: var(--outline-width) solid blue;
+}
+
+
+
+
+
+
+
+/* Position warning box */
+.warning {
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	right: 1rem;
+	width: max-content;
+	text-align: center;
+	max-width: 90vw;
+	margin: auto;
+	z-index: 2;
+	font-size: 0.8em;
+	color: #333;
+}
+
+.gallery {
+  --s: 150px; /* control the size */
+  --g: 10px;  /* control the gap */
+  --f: 1.5;   /* control the scale factor */
+  
+  display: grid;
+  gap: var(--g);
+  width: calc(3*var(--s) + 2*var(--g));
+  aspect-ratio: 1;
+  grid-template-columns: repeat(3,auto);
+  width: 100%;
+}
+
+.gallery > img {
+  width: 0;
+  height: 0;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  filter: grayscale(80%);
+  transition: .35s linear;
+}
+
+.gallery img:hover{
+  filter: grayscale(0);
+  width:  calc(var(--s)*var(--f));
+  height: calc(var(--s)*var(--f));
+}
+
+
+section#writing {
+    padding: 0;
+}
+.VueCarousel-inner {
+    
+}
+
+.VueCarousel-slide {
+   
+    height: 260px;
+    
+}
+
+.VueCarousel-slide a.post-image {
+    display: none;
+}
+
+.VueCarousel-slide h2 {
+    height: 150px;
+    align-content: center;
+}
+
+.VueCarousel-slide .author {
+    display: none;
+}
+
+.read-more {
+    display: none;
+}
 
 
