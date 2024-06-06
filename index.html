@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpg" href="public/icons/avatar.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mphatso Nkhoma | Filmmaker / Animators</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <ul id="nav-menu">
+        <li class="nav-menu-item" onclick="changeContent('about')">
+          <a>About Me</a>
+        </li>
+        <li class="nav-menu-item" onclick="changeContent('film')">
+          <a>Filmmaking</a>
+        </li>
+        <li class="nav-menu-item" onclick="changeContent('writing')">
+          <a>Writing</a>
+        </li>
+        <li class="nav-menu-item" onclick="changeContent('contact')">
+          <a>Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <aside>
+        <img src="public/images/mainimage.jpeg" alt="image of Mphatso Nkhoma" />
+      </aside>
+      <section>
+        <h1><span>Mphatso</span><br /><span class="surname">Nkhoma</span></h1>
+        <!--<span class="on-top">Mphatso</span><br /><span class="on-top"
+        >Nkhoma</span
+      >-->
+        <p>
+          I am an Animator and Marketer with over 3 years of experience in both!
+          In 2020 I began my animating journey with Blender 2.83 and have
+          expanded my knowledge and expertise since. I am dedicated to eternal
+          learning with an emphasis on awareness and compassion.
+        </p>
+      </section>
+    </header>
+    <main>
+      <section id="film">
+        <aside>
+          <h3>The Ascension</h3>
+          <p>Short Film</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Reprehenderit quibusdam inventore tempore, distinctio aspernatur rem
+            corporis commodi odio ullam non beatae fugiat sed dolores illum,
+            repellat, sapiente corrupti. Consequatur esse odio tenetur
+            temporibus, incidunt fuga, aliquam minima minus.
+          
+        </p>
+          <p>
+            Director: Mphatso Nkhoma <br />Producer: Ali Syed
+            <br />Cinematographer: Tate Harhoff <br />Editor: Emma Kühn
+            <br />Sound Designer: Mikhail Williams<br />
+            Production Design: Gia Barbosa and Bonolo Motalane
+          </p>
+        </aside>
+        <iframe
+          width="560"
+          height="415"
+          src="https://www.youtube-nocookie.com/embed/18l6IiY2k2Q?si=CQkrrjAggPxfCDXE&amp;controls=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+        
+      </section>
+      <section id="writing">
+        <div
+          id="retainable-rss-embed"
+          data-rss="https://medium.com/@mphatsonkhoma23/feed/"
+          data-maxcols="3"
+          data-layout="grid"
+          data-poststyle="inline"
+          data-readmore="Read the rest"
+          data-buttonclass="btn btn-primary"
+          data-offset="-100"></div>
+      </section>
+    </main>
+
+    <address id="contact">
+      <div align="center" class="socialbtns">
+        <ul>
+          <li><a href="https://www.instagram.com/m_ph_a/" class="fa fa-lg fa-instagram"></a></li>
+          
+          <li><a href="https://medium.com/@mphatsonkhoma23/" class="fa fa-lg fa-medium"></a></li>
+          <li><a href="https://www.linkedin.com/in/mphatso-nkhoma/" class="fa fa-lg fa-linkedin"></a></li>
+          <li><a href="https://www.youtube.com/watch?v=18l6IiY2k2Q" class="fa fa-lg fa-youtube"></a></li>
+        </ul>
+      </div>
+    </address>
+    <a href="https://www.freepik.com/free-vector/w-colours-pattern-design-template_33459243.htm#fromView=image_search_similar&page=1&position=14&uuid=023f6c93-9fdd-4a76-9117-03de88fe6b6f">Image by freepik</a>
+  </body>
+  <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
+<script> function changeContent(section) {
+    var scrollDiv = document.getElementById(section).offsetTop;
+window.scrollTo({ top: scrollDiv, behavior: 'smooth'});
+}
+</script>
+  </html>
