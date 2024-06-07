@@ -138,6 +138,7 @@ header:hover:after{
 header aside {
     width: 100%;
     grid-template-columns: 100%;
+    align-content: center;
 }
 header img {
    width: 100%;
@@ -313,14 +314,12 @@ address {
 	background: rgb(255, 255, 255);
 	color: rgb(10, 5, 7);
 	border-radius: 1em;
-	overflow: hidden;
+	
 
 	display: grid;
 	grid-template-areas: "text img";
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto;
-
-	align-items: stretch;
+	
 	outline: var(--outline-width) solid blue;
 }
 
@@ -405,5 +404,106 @@ section#writing {
 .read-more {
     display: none;
 }
+
+
+
+@media only screen and (max-width: 1300px) {
+  header section {
+    padding: 0 70px 0 0;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+    #film li.card {
+ height: 750px;
+ position: inherit;
+	
+    }
+    #film li.card div.card__content {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+       
+    }
+     #film li.card div.card__content aside {
+        text-align: center;
+        padding: 0px;
+        margin:  50px 0px;
+        width: 100%;
+        
+     }
+
+         #film li.card div.card__content aside h3 {
+            width: 100%;
+            text-align: center;
+         }
+         #film li.card div.card__content aside p {
+            text-align: center;
+         }
+    #film li.card div.card__content  iframe {
+        width: 100%;
+        height: 40vh;
+    }
+
+    section#about {
+        grid-template-columns: 100%;
+    }
+
+    section#about div.about-me {
+        margin-left: 0;
+    }
+    section#about div.about-me h2 {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    nav {
+        background-color: var(--main-light-color);
+    }
+    nav ul {
+        padding:0 10%;
+        font-size: 13px;
+    }
+
+    header#home {
+        grid-template-columns: 100%;
+    }
+
+    header#home section {
+        margin: 0;
+        text-align: center;
+        padding-right: 0;
+        padding-bottom: 40px;
+    }
+
+    header#home aside {
+        grid-row: 1/2 ;
+    }
+    header#home aside img {
+        display: block;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+}
+
+@media only screen and (max-width: 840px) {
+#film li.card {
+ height: 800px;
+}
+}
+@media only screen and (max-width: 680px) {
+#film li.card {
+ height: 850px;
+}
+}
+@media only screen and (max-width: 550px) {
+#film li.card {
+ height: 900px;
+}
+}
+
 
 
