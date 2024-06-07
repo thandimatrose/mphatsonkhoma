@@ -505,5 +505,8 @@ section#writing {
 }
 }
 
-
+@font-face {
+    font-family: "Nexa";
+    src: url(fonts/NEXA-EXTRALIGHT.TTF);
+}
 
