@@ -183,6 +183,10 @@ section {
 section#about div.about-me {
 margin-left: 40px;
 }
+section#about h2 {
+    font-size: 3.2vw;
+    text-transform: lowercase;
+}
 section#film {
     
 }
@@ -204,6 +208,10 @@ section#film iframe {
 
 address {
     margin: 100px 0px;
+}
+
+.break-off {
+    display: none;
 }
  
 
@@ -407,6 +415,8 @@ section#writing {
 
 
 
+
+
 @media only screen and (max-width: 1300px) {
   header section {
     padding: 0 70px 0 0;
@@ -454,6 +464,15 @@ section#writing {
     section#about div.about-me h2 {
         text-align: center;
     }
+
+    section#about div.about-me h2 .break-off {
+    display: inline;
+    }
+
+    section#about div.about-me h2 .break-on {
+    display: none;
+    }
+
 }
 
 @media only screen and (max-width: 920px) {
@@ -509,4 +528,6 @@ section#writing {
     font-family: "Nexa";
     src: url(fonts/NEXA-EXTRALIGHT.TTF);
 }
+
+
 
