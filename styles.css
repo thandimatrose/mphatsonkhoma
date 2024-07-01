@@ -187,6 +187,9 @@ section#about h2 {
     font-size: 3.2vw;
     text-transform: lowercase;
 }
+section#about h2 span {
+    display: none;
+}
 section#film {
     
 }
@@ -465,11 +468,11 @@ section#writing {
         text-align: center;
     }
 
-    section#about div.about-me h2 .break-off {
-    display: inline;
+    section#about div.about-me h2 span {
+        display: inline;
     }
 
-    section#about div.about-me h2 .break-on {
+    section#about div.about-me h2 br {
     display: none;
     }
 
